@@ -49,7 +49,7 @@ function addData(chart, label, data) {
 let random ;
 setInterval(() => {
   random= Math.floor(Math.random() * 8001)
-   addData(chart1,xValues,random,random,random)
+   addData(chart1,xValues[labelse],random,random,random)
 }, 3000);
 
 function removeData(chart,label,data) {
