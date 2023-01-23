@@ -1,10 +1,10 @@
 
-let n = 1;
-var xValues = [0 , 10];
+let n = 0;
+var xValues = [0];
 let labelse;
 setInterval(() => { 
   n++;
-  let labelse = n * 10
+  let labelse = n + 10
   xValues.push(labelse)
 }, 3000);
 const ctx = document.getElementById('myChart')
