@@ -4,9 +4,9 @@ var xValues = [0];
 let labelse;
 setInterval(() => { 
   n++;
-  let labelse = n + 5
+  let labelse = n + 10
   xValues.push(labelse)
-}, 2000);
+}, 3000);
 const ctx = document.getElementById('myChart')
 const chart1 = new Chart(ctx, {
  type: "line",
