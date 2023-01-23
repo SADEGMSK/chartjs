@@ -1,11 +1,12 @@
 let n = 0;
 var xValues = []
-var labelse;
+let labelse;
 setInterval(() => { 
-  var labelse = n*10
-  labelse.push(xValues)
-  n++
-}, 3000);
+var xValues = [n*10]
+let labelse = [(n+1)*10]
+labelse.push(xValues)
+n++;
+}, 1000);
 const ctx = document.getElementById('myChart')
 const chart1 = new Chart(ctx, {
  type: "line",
@@ -60,5 +61,5 @@ function removeData(chart,label,data) {
 }
 setInterval(() => {
   random= Math.floor(Math.random() * 8001)
- removeData(chart1,xValues,random)
+ removeData(chart1,xValues[labelse],random)
 }, 3000);
