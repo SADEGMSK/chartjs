@@ -1,11 +1,11 @@
 let x;
-let n = 1;
+let n = 2;
 var xValues = [0 , 10];
-let labelse;
+var labelse;
 setInterval(() => { 
+  
+  var labelse = n * 10;
   n++;
-  let labelse = n * 10;
-  let x = labelse + 10;
   xValues.push(labelse)
 }, 3000);
 const ctx = document.getElementById('myChart')
@@ -50,7 +50,7 @@ function addData(chart, label, data) {
 let random ;
 setInterval(() => {
   random= Math.floor(Math.random() * 8001)
-   addData(chart1,xValues[x],random,random,random)
+   addData(chart1,labelse,random,random,random)
 }, 3000);
 
 function removeData(chart,label,data) {
