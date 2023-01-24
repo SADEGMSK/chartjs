@@ -41,6 +41,7 @@ function addData(oldData) {
   var labels = oldData.data.labels;
   var dataSetA = oldData["datasets"][0]["data"];
   var dataSetB = oldData["datasets"][1]["data"];
+  var datasetC = oldData["datasets"][2]["data"]
 
   labels.shift();
   count++;
@@ -56,13 +57,19 @@ function addData(oldData) {
 let random1;
 let random2;
 let random3;
+let data1 = []
+let data2 = []
+let data3 = []
 setInterval(() => {
   random1= Math.floor(Math.random() * 8001)
   random2= Math.floor(Math.random() * 8001)
   random3= Math.floor(Math.random() * 8001)
-  chart1.data.datasets[0].data[5] = random1;
-  chart1.data.datasets[1].data[5] = random2;
-  chart1.data.datasets[2].data[5] = random3;
+  data1.push(random1)
+  data2.push(random2)
+  data3.push(random3)
+  chart1.data.datasets[0].data[5] = data1
+  chart1.data.datasets[1].data[5] = data2
+  chart1.data.datasets[2].data[5] = data3
   chart1.data.labels[5] = "Newly Added";
   chart1.update();}, 3000);
 
